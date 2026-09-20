@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+models/
+output/
+test-output/
+masks/
+*.log
+demo1/
+.env
+.env.*
+*.pyc
+dist/
+build/
+.publish/

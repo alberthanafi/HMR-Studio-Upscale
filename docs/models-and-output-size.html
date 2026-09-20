@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Models and output size | HMR Studio • Upscale</title><meta name="description" content="Local AI image upscaling and restoration for Windows. Installation, features and documentation."><link rel="icon" href="favicon.ico"><link rel="stylesheet" href="style.css"></head><body><a class="skip" href="#content">Skip to content</a><header><img src="icon.png" alt=""><strong>HMR Studio • Upscale</strong><a href="https://github.com/alberthanafi/HMR-Studio-Upscale">GitHub repository ↗</a></header><div class="layout"><nav aria-label="Documentation"><a href="index.html">Home</a><a href="installation.html">Installation</a><a href="what-is-hmr-studio.html">What is HMR Studio?</a><a href="quick-start.html">Quick start</a><a href="models-and-output-size.html" aria-current="page">Models and output size</a><a href="feature-switches-and-presets.html">Feature switches and presets</a><a href="colorization-preset.html">Colorization preset</a><a href="detail-and-hyper-realistic-detail.html">Detail and hyper-realistic detail</a><a href="repair-tears-scratches-and-missing-areas.html">Repair tears, scratches and missing areas</a><a href="cuda-tiles-and-fp16.html">CUDA, tiles and FP16</a><a href="progress-and-estimated-time.html">Progress and estimated time</a><a href="cpu-gpu-and-memory-readings.html">CPU, GPU and memory readings</a><a href="output-formats-and-comparison.html">Output formats and comparison</a><a href="troubleshooting-and-size-limits.html">Troubleshooting and size limits</a><a href="privacy-and-source-safety.html">Privacy and source safety</a><a href="about-hmr-studio.html">About HMR Studio</a></nav><main id="content"><h1>Models and output size</h1>
+        <p><b>Photo · Real-ESRGAN 4×:</b> general photographs and detailed images.</p>
+        <p><b>Anime · Real-ESRGAN 4×:</b> illustrations and anime-style artwork.</p>
+        <p><b>Photo · Real-ESRGAN 2×:</b> native 2× enlargement.</p>
+        <p><b>General photo · Real-ESRGAN v3:</b> an alternative smoother restoration model.</p>
+        <p><b>Photo · RealESRNet 4×:</b> a non-GAN alternative with softer detail and less synthesized texture.</p>
+        <p><b>Photo · Weak denoise v3:</b> weaker denoising retains more source texture and noise. Best compared with General v3 on clean sources.</p>
+        <p><b>Anime · Fast v3 4×:</b> a compact model for illustrations and animation stills. This app processes images, not video files.</p>
+        <p>All seven models run locally on CUDA or CPU. Each downloads on first use.
+        Model descriptions appear below the selector. Compare results on your source;
+        no model is best for every image.</p>
+        <h3>Damaged or already enlarged sources</h3><p>Enable <b>Clean compressed / already enlarged input</b>
+        to reduce the source to 50% before inference. This can suppress existing block structure
+        instead of sharpening it. Final dimensions remain the selected multiple of the original.
+        It can soften detail; leave it off for clean originals. Missing facial detail cannot be
+        faithfully recovered just by enlarging. PNG files record processing settings in metadata.</p>
+        <h3>Model scale versus output size</h3><p>The model first processes at its native scale.
+        If the requested output scale differs, the result is resized afterward. Choosing 2×
+        output with a 4× model still requires a 4× intermediate image.</p>
+        <h3>Portrait preset and face restoration</h3><p>Apply portrait preset selects General v3,
+        cleanup, 85% GFPGAN face restoration, FP32 and 2× PNG. Face restoration is optional:
+        Off, Gentle (60%), Strong (85%), or Maximum (100%). It aligns detected faces and blends
+        reconstructed detail back into the image. Stronger settings can change facial features.
+        Hands and clothing are not face-restored. If no face is detected, the upscaled image is kept.</p>
+        <p>Face models download on first use and then work offline. Cancel is checked between faces;
+        ETA excludes face restoration. Image files only; video is not included.</p></main></div><footer>Copyright © 2026 Hanafi Mohd Radi. All rights reserved. Third-party components retain their respective licenses. <a href="https://github.com/alberthanafi/HMR-Studio-Upscale/blob/main/THIRD_PARTY_NOTICES.md">Credits & notices</a></footer></body></html>
